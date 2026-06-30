@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { DECISION_TREES, ISSUE_CATEGORIES } from "../data/decisionTrees";
