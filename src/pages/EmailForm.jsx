@@ -69,7 +69,7 @@ function EmailForm() {
         );
 
         const response = await fetch(
-          "https://galore-extortion-volley.ngrok-free.dev/api/templates/get-template",
+          `${import.meta.env.VITE_API_URL}/api/templates/get-template`,//flag
           {
             method: "POST",
             headers: {
@@ -249,7 +249,7 @@ ${passengers[0]?.name || "Passenger Name"}
 
       const response = await fetch(
 
-        "https://galore-extortion-volley.ngrok-free.dev/api/email/send",
+        `${import.meta.env.VITE_API_URL}/api/email/send`,//flag
 
         {
 
