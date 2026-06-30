@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import trainImg from '../assets/vande-bharat.jpg';
 import "./Home.css";
