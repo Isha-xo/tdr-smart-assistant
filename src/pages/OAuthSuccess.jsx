@@ -10,7 +10,7 @@ export default function OAuthSuccess() {
         console.log("Fetching profile...");
 
         const response = await fetch(
-          "https://galore-extortion-volley.ngrok-free.dev/auth/profile",
+          `${import.meta.env.VITE_API_URL}/auth/profile`,//flag
           {
             credentials: "include",
           }

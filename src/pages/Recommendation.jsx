@@ -22,7 +22,7 @@ export default function Recommendation() {
   const { eligible, reason, deadline, recommendation } = result;
 
   const handleGoogleLogin = () => {
-    
+
 
     localStorage.setItem(
       "recommendationState",
@@ -34,7 +34,7 @@ export default function Recommendation() {
     );
 
     window.location.href =
-      "https://galore-extortion-volley.ngrok-free.dev/auth/google";
+      `${import.meta.env.VITE_API_URL}/auth/google`;
   };
 
   return (
