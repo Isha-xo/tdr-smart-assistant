@@ -1,0 +1,283 @@
+.email-page {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.form-card,
+.preview-card {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.field {
+  margin-bottom: 30px;
+}
+
+.field label,
+.passenger-input label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.field input,
+.passenger-input input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  font-size: 15px;
+}
+
+.passenger-section h3 {
+  margin-bottom: 5px;
+}
+
+.passenger-section p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.passenger-row {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.passenger-input {
+  flex: 1;
+}
+
+.remove-btn {
+  padding: 14px 18px;
+  background: #fff;
+  border: 1px solid #ff4d4f;
+  color: #ff4d4f;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.add-btn {
+  padding: 14px 24px;
+  background: white;
+  border: 1px solid #0d47a1;
+  color: #0d47a1;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.preview-card h2 {
+  margin-bottom: 20px;
+}
+
+.email-body {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  min-height: 500px;
+  padding: 30px;
+  background: white;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.email-body pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.9;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  color: #374151;
+}
+
+.email-textarea {
+  width: 100%;
+  height: 450px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: inherit;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.edit-btn,
+.send-btn {
+  padding: 14px 40px;
+  border: none;
+  border-radius: 10px;
+  background: #0d47a1;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.edit-btn:hover,
+.send-btn:hover {
+  background: #08367d;
+}
+
+@media (max-width: 1000px) {
+  .email-page {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .passenger-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.email-meta {
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+}
+
+.email-meta p {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  word-break: break-word;
+}
+
+.email-meta p:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.email-meta strong {
+  display: inline-block;
+  width: 80px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.send-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.send-btn:disabled:hover {
+  background: #9ca3af;
+}
+/* Success Modal */
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.success-modal {
+  background: white;
+  border-radius: 20px;
+  padding: 48px 40px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.25s ease;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 50%;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.success-modal h2 {
+  font-size: 22px;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.success-modal p {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.success-btn {
+  padding: 13px 48px;
+  background: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.success-btn:hover {
+  background: #08367d;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}

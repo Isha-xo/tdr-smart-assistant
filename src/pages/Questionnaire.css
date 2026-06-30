@@ -1,0 +1,155 @@
+.questionnaire-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* ── Header row ── */
+.q-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.back-link {
+  background: none;
+  border: none;
+  color: #1a56a8;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.back-link:hover {
+  opacity: 0.75;
+}
+
+.q-category {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Question card ── */
+.q-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 36px 32px 28px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 480px) {
+  .q-card {
+    padding: 24px 18px 20px;
+  }
+}
+
+.q-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.45;
+  margin-bottom: 32px;
+}
+
+/* ── Yes / No buttons ── */
+.yn-row {
+  display: flex;
+  gap: 16px;
+}
+
+.yn-btn {
+  flex: 1;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  background: #f7f7f7;
+  cursor: pointer;
+  color: #333;
+  transition: border-color 0.18s, background 0.18s, color 0.18s, transform 0.12s;
+}
+
+.yn-btn:hover {
+  border-color: #bbb;
+  background: #fff;
+}
+
+.yn-btn:active {
+  transform: scale(0.97);
+}
+
+.yes-btn.active {
+  border-color: #1a56a8;
+  background: #eef4ff;
+  color: #1a56a8;
+}
+
+.no-btn.active {
+  border-color: #c0392b;
+  background: #fff0ef;
+  color: #c0392b;
+}
+
+/* ── Next button ── */
+.q-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 28px;
+}
+
+.next-btn {
+  padding: 12px 36px;
+  background: #1a56a8;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.18s, opacity 0.18s;
+  letter-spacing: 0.02em;
+}
+
+.next-btn:hover:not(.disabled) {
+  background: #134488;
+}
+
+.next-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Progress ── */
+.q-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.q-progress-label {
+  font-size: 13px;
+  color: #999;
+}
+
+.q-progress-bar {
+  height: 5px;
+  background: #e8e8e8;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.q-progress-fill {
+  height: 100%;
+  background: #1a56a8;
+  border-radius: 3px;
+  transition: width 0.35s ease;
+  min-width: 6px;
+}

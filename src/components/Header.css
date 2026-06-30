@@ -1,0 +1,15 @@
+.app-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e3a8a;
+  cursor: pointer;
+}
